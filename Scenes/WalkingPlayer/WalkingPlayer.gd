@@ -38,6 +38,13 @@ func pickUpRock(rock):
 
 func _physics_process(delta):
 	var velocity = get_input()
+
+	if velocity.length() > 0:
+		if !$WalkAudioStream.is_playing():
+			$WalkAudioStream.play()
+	else:
+		$WalkAudioStream.stop()
+
 	var collision = move_and_collide(velocity * delta)
 	if collision:
 		if ('type' in collision.collider):

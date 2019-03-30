@@ -27,6 +27,8 @@ func _input(event):
 	if event is InputEventMouseButton:
 		if (event.is_pressed() == false):
 			if (ammunition_number > 0):
+				$AnimationPlayer.play('Shoot')
+				$ShootAudioStream.play()
 				ammunition_number -= 1 
 				var rotation = $Top.get_rotation()
 				var position = get_position()
