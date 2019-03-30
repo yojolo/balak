@@ -1,10 +1,10 @@
 extends StaticBody2D
 
 signal shoot
+signal out_of_ammo
 
 var BulletScene = preload("res://Scenes/Objects/Bullet.tscn")
 
-export var life = 5
 var type = 'Tower'
 export var number_ennemy_close = 0
 export var ammunition_number = 5 
@@ -25,11 +25,14 @@ func _process(delta):
 func _input(event):
 	# Mouse in viewport coordinates
 	if event is InputEventMouseButton:
-		if (event.is_pressed() == false and ammunition_number > 0):
-			ammunition_number -= 1 
-			var rotation = $Top.get_rotation()
-			var position = get_position()
-			emit_signal('shoot', BulletScene, rotation, position)
+		if (event.is_pressed() == false):
+			if (ammunition_number > 0):
+				ammunition_number -= 1 
+				var rotation = $Top.get_rotation()
+				var position = get_position()
+				emit_signal('shoot', BulletScene, rotation, position)
+			else:
+				emit_signal('out_of_ammo')
 	
 
 
@@ -45,5 +48,4 @@ func on_body_exit_OuterShpere(body):
 			number_ennemy_close-=1
 			
 func reload(number): 
-	print(ammunition_number, 'tower_reload', number)
 	ammunition_number += number
