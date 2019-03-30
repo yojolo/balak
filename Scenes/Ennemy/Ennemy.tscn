@@ -207,7 +207,7 @@ radius = 1253.8
 
 [node name="Ennemy" type="KinematicBody2D"]
 position = Vector2( 0, -3 )
-scale = Vector2( 0.25, 0.25 )
+scale = Vector2( 0.1, 0.1 )
 script = ExtResource( 1 )
 target = Vector2( 50, 50 )
 
@@ -265,6 +265,7 @@ region_enabled = true
 region_rect = Rect2( 97, 583, 113, 113 )
 
 [node name="Mask" type="Sprite" parent="."]
+scale = Vector2( 1, 1 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 264, 464, 222, 233 )

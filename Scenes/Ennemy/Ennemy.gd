@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+signal hit_tower
+
 var type = 'Ennemy'
 export var speed= 100
 export (Vector2) var target
@@ -25,12 +27,18 @@ func _process(delta):
 	velocity.x = 1;
 	velocity = velocity.rotated(rotation)
 	velocity = velocity.normalized() * speed
-	move_and_collide(velocity * delta)
+	var collision = move_and_collide(velocity * delta)
+	if (collision):
+		if ('type' in collision.collider):
+			if (collision.collider.type == 'Tower'):
+				queue_free()
+				emit_signal('hit_tower')
+		else:
+    		velocity = velocity.slide(collision.normal)
 
 
 func _on_Area2D_body_entered(body):
 	if ('type' in body):
-		print('WalkingPlayer' == body.type)
 		if (body.type == 'WalkingPlayer'):
 			player = body
 

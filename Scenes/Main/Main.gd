@@ -1,9 +1,10 @@
 extends Node2D
 
 var WalkingPlayerScene = preload("res://Scenes/WalkingPlayer/WalkingPlayer.tscn")
+var Tower = preload("res://Scenes/Tower/Tower.tscn")
 var EnnemyScene = preload("res://Scenes/Ennemy/Ennemy.tscn")
 
-
+var tower;
 var player;
 var screen_size  # Size of the game window.
 
@@ -17,14 +18,19 @@ func _ready():
 	start()
 
 func start():
-	print('intanciating')
 	player = WalkingPlayerScene.instance()
 	player.connect("hit", self, "on_Player_Hit")
+	tower = Tower.instance()
+	tower.connect("shoot", self, "on_Tower_shoot")
 	var middle = screen_size
 	middle.x /= 2
 	middle.y /= 2
-	player.position = middle
+	tower.position = middle
+	var playerPos = middle;
+	playerPos.x += 50
+	player.position = playerPos
 	add_child(player)
+	add_child(tower)
 	
 func on_Player_Hit():
 	print('Player hit')
@@ -32,6 +38,9 @@ func on_Player_Hit():
 	
 func gameOver():
 	player.queue_free();
+	
+func on_Tower_shoot(Bullet, rotation, position):
+	print('shoot')
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -46,22 +55,19 @@ func _on_Timer_timeout():
 	if (direction == 0):
 		if (sens == 0):
 			#Top
-			print('top')
-			position.y = 50
+			position.y = -50
 		else:
 			#Bottom
-			print('bottom')
-			position.y = screen_size.y - 50
-		position.x = randi() % int(screen_size.x -100)
+			position.y = screen_size.y + 50
+		position.x = randi() % int(screen_size.x + 100) - 50
 	else:
 		if (sens == 0):
-			position.x = 50
+			position.x = -50
 			#Left
-			print('left')
 		else:
 			#Right
-			print('right')
-			position.y = screen_size.x - 50
-		position.y = randi() % int(screen_size.y -100)
+			position.y = screen_size.x + 50
+		position.y = randi() % int(screen_size.y +100) - 50
 	ennemy.position = position
+	ennemy.setTarget(tower.position)
 	add_child(ennemy)
