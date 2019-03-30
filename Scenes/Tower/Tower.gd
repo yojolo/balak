@@ -15,7 +15,6 @@ export var ammunition_number = 5
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -44,3 +43,7 @@ func on_body_exit_OuterShpere(body):
 	if ('type' in body):
 		if (body.type == 'Ennemy'):
 			number_ennemy_close-=1
+			
+func reload(number): 
+	print(ammunition_number, 'tower_reload', number)
+	ammunition_number += number

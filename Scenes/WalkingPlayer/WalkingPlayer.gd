@@ -2,13 +2,15 @@ extends KinematicBody2D
 
 signal hit
 signal rock_pick_up
+signal tower_reload
 
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 export var speed = 400  # How fast the player will move (pixels/sec).
 var type = 'WalkingPlayer'
-
+var maxRocks = 5
+var currentCharge = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -34,11 +36,17 @@ func _physics_process(delta):
 	var collision = move_and_collide(velocity * delta)
 	if collision:
 		if ('type' in collision.collider):
+			if (collision.collider.type == 'Tower'):
+				emit_signal('tower_reload', currentCharge)
+				print('r')
+				currentCharge = 0
 			if (collision.collider.type == 'Ennemy'):
 				emit_signal('hit')
 			if (collision.collider.type == 'Rock'):
-				collision.collider.queue_free()
-				emit_signal('rock_pick_up')
+				if currentCharge < maxRocks:
+					collision.collider.queue_free()
+					currentCharge += 1
+					emit_signal('rock_pick_up')
 		else:
     		velocity = velocity.slide(collision.normal)
 

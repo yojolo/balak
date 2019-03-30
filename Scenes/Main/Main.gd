@@ -22,6 +22,7 @@ func start():
 	player.connect("hit", self, "on_Player_Hit")
 	tower = Tower.instance()
 	tower.connect("shoot", self, "on_Tower_shoot")
+	player.connect("tower_reload", tower, "reload")
 	var middle = screen_size
 	middle.x /= 2
 	middle.y /= 2
