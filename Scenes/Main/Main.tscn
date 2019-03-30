@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/Main/Main.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Main/Levels/LevelBase.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Objects/Rock.tscn" type="PackedScene" id=3]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
@@ -14,5 +15,8 @@ wait_time = 3.0
 autostart = true
 
 [node name="Position2D" type="Position2D" parent="."]
+
+[node name="Rock" parent="." instance=ExtResource( 3 )]
+position = Vector2( 533.717, 387.7 )
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
