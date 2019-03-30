@@ -4,7 +4,7 @@
 [ext_resource path="res://Scenes/Ennemy/sprite.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Ennemy/death_1.ogg" type="AudioStream" id=3]
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id=5]
 resource_name = "Idle"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Mask_remote/Feather_left:position")
@@ -248,7 +248,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
+"values": [ 0.0, -13.1656, -9.58739, 16.2314, 0.0 ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("Mask_remote/Feather_right:position")
@@ -272,7 +272,7 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
+"values": [ 0.0, -12.2608, -8.86104, 14.7115, 0.0 ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("Mask_remote/Foot_right:position")
@@ -320,7 +320,7 @@ tracks/9/keys = {
 "times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
+"values": [ 0.0, -13.3499, -9.32764, 14.3824, 0.0 ]
 }
 tracks/10/type = "value"
 tracks/10/path = NodePath("Mask_remote/Hand_left:position")
@@ -482,7 +482,7 @@ region_enabled = true
 region_rect = Rect2( 52, 92.75, 46, 46.25 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Idle = SubResource( 1 )
+anims/Idle = SubResource( 5 )
 anims/Walk = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
