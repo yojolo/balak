@@ -60,3 +60,7 @@ func kill():
 	$DeathAudioStream.play()
 	emit_signal("killed", self)
 	queue_free()
+
+func stop_moving():
+	moving = false
+	

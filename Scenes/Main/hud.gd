@@ -36,12 +36,16 @@ func _on_Start_pressed():
 	$AmmunitionLabel.show()
 	$ScoreLabel.show()
 	$HeartLabel.show()
+	$ScoreLabel/Score.set_text(str(score))
+	$AmmunitionLabel/Label.set_text(str(ammo) + '/' + str(start_Ammo))
+	$HeartLabel/Label.set_text(str(life) + '/' + str(start_life))
 	emit_signal('start_game')
 	$GameOver.hide()
 	
 func stop():
 	$GameOver.show()
-	$GameOver/Score.set_text(score)
+	$GameOver/Score.set_text(str(score))
+	$Start.show()
 	
 func remove_life():
 	life -= 1
@@ -54,12 +58,11 @@ func shoot(BulletScene, rotation, position):
 	$AmmunitionLabel/Label.set_text(str(ammo) + '/' + str(start_Ammo))
 
 func no_ammo():
-	print('test')
 	$NoAmmo.show()
 	$NoAmmo/AnimationPlayer.play('outOfAmmo')
 	$NoAmmo/Timer.start()
 
 func ennemy_killed(ennemy):
 	score += ennemy.value
-	$ScoreLabel/Score.set_text(score)
+	$ScoreLabel/Score.set_text(str(score))
 	
