@@ -1,0 +1,65 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://test.png" type="Texture" id=1]
+
+[sub_resource type="TileSet" id=1]
+
+[node name="TileSet" type="Node2D"]
+
+[node name="LimitLeft" type="Sprite" parent="."]
+position = Vector2( -25, -17 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 50, 0, 50, 65 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LimitLeft"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LimitLeft/StaticBody2D"]
+position = Vector2( -5.25, -2 )
+scale = Vector2( 0.8125, 1 )
+polygon = PoolVector2Array( -24.3077, -31, -24.3077, 35, -12, 35, -12, -31 )
+
+[node name="LimitRight" type="Sprite" parent="."]
+position = Vector2( 65, -17 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 200, 0, 50, 65 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LimitRight"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LimitRight/StaticBody2D"]
+polygon = PoolVector2Array( 25, -33, 15, -33, 15, 33, 25, 33 )
+
+[node name="LimitTop" type="Sprite" parent="."]
+position = Vector2( -25, 64 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 150, 0, 50, 65 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LimitTop"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LimitTop/StaticBody2D"]
+polygon = PoolVector2Array( -25, -34, -25, -24, 25, -24, 25, -34 )
+
+[node name="LimitBottom" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 65, 65 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 100, 0, 50, 50 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LimitBottom"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LimitBottom/StaticBody2D"]
+polygon = PoolVector2Array( -25, 15, -25, 25, 25, 25, 25, 15 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+format = 1
+
+[node name="Grass" type="Sprite" parent="."]
+position = Vector2( 159, -11 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 50, 65 )
+
