@@ -5,4 +5,5 @@
 [node name="Main" type="Node2D"]
 
 [node name="LevelBase" parent="." instance=ExtResource( 1 )]
+position = Vector2( 172.678, 455.437 )
 
