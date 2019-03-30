@@ -59,6 +59,11 @@ func _on_Area2D_body_exited(body):
 func kill():
 	$DeathAudioStream.play()
 	emit_signal("killed", self)
+	stop_moving()
+	hide()
+	$DeathTimer.start()
+
+func free():
 	queue_free()
 
 func stop_moving():
