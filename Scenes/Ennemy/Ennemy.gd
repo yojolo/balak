@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+var type = 'Ennemy'
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

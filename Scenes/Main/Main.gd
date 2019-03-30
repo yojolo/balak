@@ -1,7 +1,8 @@
-extends StaticBody2D
+extends Node2D
 
-signal rock_pick_up
-var type = 'Rock'
+export (PackedScene) var WalkingPlayer
+
+var player;
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -9,7 +10,11 @@ var type = 'Rock'
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+    $Timer.connect("timeout", self, "_on_Timer_timeout")
+	start()
+
+func start:
+	player = WalkingPlayer.instance()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

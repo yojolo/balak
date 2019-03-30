@@ -1,7 +1,4 @@
-extends StaticBody2D
-
-signal rock_pick_up
-var type = 'Rock'
+extends Node2D
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -14,3 +11,11 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_WalkingPlayer_hit():
+	print('hit')
+
+
+func _on_WalkingPlayer_rock_pick_up():
+	print('rock_pick_up')
