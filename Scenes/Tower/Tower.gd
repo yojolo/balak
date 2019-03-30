@@ -26,6 +26,9 @@ func _input(event):
 	# Mouse in viewport coordinates
 	if event is InputEventMouseButton:
 		if (event.is_pressed() == false and ammunition_number > 0):
+			print('shoot')
+			$AnimationPlayer.play('Shoot')
+			$ShootAudioStream.play()
 			ammunition_number -= 1 
 			var rotation = $Top.get_rotation()
 			var position = get_position()

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/WalkingPlayer/WalkingPlayer.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/WalkingPlayer/sprite.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/WalkingPlayer/walk_1.ogg" type="AudioStream" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 21.4606
@@ -72,4 +73,7 @@ position = Vector2( 93.3069, -63.3783 )
 rotation = -1.5708
 scale = Vector2( -1, 1 )
 remote_path = NodePath("../../Leg_right")
+
+[node name="WalkAudioStream" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
 
