@@ -42,7 +42,7 @@ func start():
 	_on_RockTimer_timeout()
 	_on_RockTimer_timeout()
 
-func _on_hud_stop_game():
+func stop():
 	player.queue_free()
 	tower.queue_free()
 	$EnnemyTimer.stop()
