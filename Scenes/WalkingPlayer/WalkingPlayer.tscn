@@ -20,14 +20,14 @@ region_enabled = true
 region_rect = Rect2( 2, 7, 354, 210 )
 
 [node name="Leg_left" type="Sprite" parent="."]
-position = Vector2( -70.9839, 91.5702 )
+position = Vector2( -70.9842, 91.5699 )
 scale = Vector2( 1, 1 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 388, 21, 94, 114 )
 
 [node name="Leg_right" type="Sprite" parent="."]
-position = Vector2( 63.3783, 93.3068 )
+position = Vector2( 63.378, 93.3071 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
 texture = ExtResource( 2 )

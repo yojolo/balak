@@ -7,6 +7,8 @@ var BulletScene = preload("res://Scenes/Objects/Bullet.tscn")
 export var life = 5
 var type = 'Tower'
 export var number_ennemy_close = 0
+export var ammunition_number = 5 
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -19,14 +21,16 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var mouse_position = get_viewport().get_mouse_position()
-	look_at(mouse_position)
+	$Top.look_at(mouse_position)
 	
 func _input(event):
 	# Mouse in viewport coordinates
 	if event is InputEventMouseButton:
-		var rotation = get_global_transform().get_rotation()
-		var position = get_position()
-		emit_signal('shoot', BulletScene, rotation, position)
+		if (event.is_pressed() == false and ammunition_number > 0):
+			ammunition_number -= 1 
+			var rotation = $Top.get_rotation()
+			var position = get_position()
+			emit_signal('shoot', BulletScene, rotation, position)
 	
 
 

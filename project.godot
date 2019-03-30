@@ -16,7 +16,16 @@ _global_script_class_icons={
 [application]
 
 config/name="Balak"
+run/main_scene="res://Scenes/Main/Main.tscn"
 config/icon="res://icon.png"
+
+[layer_names]
+
+2d_physics/layer_1="background"
+2d_physics/layer_2="tower"
+2d_physics/layer_3="player"
+2d_physics/layer_4="bullet"
+2d_physics/layer_5="ennemy"
 
 [rendering]
 

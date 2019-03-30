@@ -3,16 +3,13 @@
 [ext_resource path="res://Scenes/Tower/Tower.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Tower/sprite.png" type="Texture" id=2]
 
-[sub_resource type="CircleShape2D" id=1]
-radius = 27.4876
-
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="CircleShape2D" id=4]
 radius = 130.867
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 resource_name = "Fire"
 tracks/0/type = "value"
-tracks/0/path = NodePath("Top/Canon_remote:position")
+tracks/0/path = NodePath("Top/Top/Canon_remote:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -24,7 +21,7 @@ tracks/0/keys = {
 "values": [ Vector2( -2.095, -100.561 ), Vector2( -2.095, -61.4537 ), Vector2( -2.095, -100.561 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Top/Canon_remote:rotation_degrees")
+tracks/1/path = NodePath("Top/Top/Canon_remote:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -36,16 +33,17 @@ tracks/1/keys = {
 "values": [ 0.0, 0.0, 0.0 ]
 }
 
-[node name="Tower" type="StaticBody2D"]
-script = ExtResource( 1 )
+[sub_resource type="CircleShape2D" id=3]
+radius = 126.567
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+[node name="Tower" type="StaticBody2D"]
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="Base" type="Sprite" parent="."]
 texture = ExtResource( 2 )
@@ -53,24 +51,29 @@ region_enabled = true
 region_rect = Rect2( 6, 78, 245, 251 )
 
 [node name="Canon" type="Sprite" parent="."]
-position = Vector2( 100.561, -2.095 )
+position = Vector2( 100.561, -2.09464 )
 rotation = 1.5708
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 324, 5, 109, 129 )
 
-[node name="Top" type="Sprite" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Fire = SubResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 3 )
+
+[node name="Top" type="Node2D" parent="."]
+
+[node name="Top" type="Sprite" parent="Top"]
 rotation = 1.5708
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 309, 145, 179, 182 )
 
-[node name="Canon_remote" type="RemoteTransform2D" parent="Top"]
+[node name="Canon_remote" type="RemoteTransform2D" parent="Top/Top"]
 position = Vector2( -2.095, -100.561 )
-remote_path = NodePath("../../Canon")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Fire = SubResource( 3 )
+remote_path = NodePath("../../../Canon")
 
 [connection signal="body_entered" from="Area2D" to="." method="on_body_enter_OuterShpere"]
 [connection signal="body_exited" from="Area2D" to="." method="on_body_exit_OuterShpere"]

@@ -33,14 +33,16 @@ func start():
 	add_child(tower)
 	
 func on_Player_Hit():
-	print('Player hit')
 	gameOver();
 	
 func gameOver():
 	player.queue_free();
 	
 func on_Tower_shoot(Bullet, rotation, position):
-	print('shoot')
+	var bullet = Bullet.instance()
+	bullet.position = position
+	bullet.set_rotation(rotation)
+	add_child(bullet)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
