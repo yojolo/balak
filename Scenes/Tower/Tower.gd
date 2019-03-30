@@ -18,10 +18,11 @@ func _process(delta):
 	look_at(mouse_position)
 	
 func _input(event):
-   # Mouse in viewport coordinates
-   if event is InputEventMouseButton:
-	var rotation = get_global_transform().get_rotation()
-	var position = get_position()
+	# Mouse in viewport coordinates
+	if event is InputEventMouseButton:
+		var rotation = get_global_transform().get_rotation()
+		var position = get_position()
+	
 
 
 func on_body_enter_OuterShpere(body):
