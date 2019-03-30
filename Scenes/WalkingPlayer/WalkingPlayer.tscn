@@ -1,0 +1,4 @@
+[gd_scene format=2]
+
+[node name="WalkingPlayer" type="KinematicBody2D"]
+
