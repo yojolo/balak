@@ -6,18 +6,21 @@ var type = 'Ennemy'
 export var speed= 100
 export (Vector2) var target
 var player
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
 func setTarget(targetToSet):
 	target = targetToSet
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	$AnimationPlayer.play('Idle')
+
 	var rotation
 	if (player != null):
 		rotation = player.position.angle_to_point(get_position())

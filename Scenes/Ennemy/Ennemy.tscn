@@ -3,10 +3,10 @@
 [ext_resource path="res://Scenes/Ennemy/Ennemy.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Ennemy/sprite.png" type="Texture" id=2]
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id=3]
 resource_name = "Idle"
 tracks/0/type = "value"
-tracks/0/path = NodePath("Mask_remote/Hand_left:position")
+tracks/0/path = NodePath("Mask_remote/Feather_left:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -15,10 +15,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.4, 1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -129.614, 45.2408 ), Vector2( -129.614, 58.7969 ), Vector2( -129.614, 45.2408 ) ]
+"values": [ Vector2( -16.421, -17.1693 ), Vector2( -16.421, -17.1693 ), Vector2( -16.421, -17.1693 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Mask_remote/Hand_left:rotation_degrees")
+tracks/1/path = NodePath("Mask_remote/Feather_left:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -27,10 +27,10 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.4, 1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 0.0, 0.0 ]
+"values": [ 0.0, -11.2866, 0.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Mask_remote/Feather_left:position")
+tracks/2/path = NodePath("Mask_remote/Feather_right:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -39,10 +39,10 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 0.4, 1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -65.6381, -85.591 ), Vector2( -61.6418, -86.0652 ), Vector2( -65.6381, -85.591 ) ]
+"values": [ Vector2( 12.3183, -16.5706 ), Vector2( 12.3183, -16.5706 ), Vector2( 12.3183, -16.5706 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Mask_remote/Feather_left:rotation_degrees")
+tracks/3/path = NodePath("Mask_remote/Feather_right:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -51,10 +51,10 @@ tracks/3/keys = {
 "times": PoolRealArray( 0, 0.4, 1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, -8.59721, 0.0 ]
+"values": [ 0.0, 9.06772, 0.0 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Mask_remote/Feather_right:position")
+tracks/4/path = NodePath("Mask_remote/Feather_middle:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -63,10 +63,10 @@ tracks/4/keys = {
 "times": PoolRealArray( 0, 0.4, 1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 72.8981, -96.3616 ), Vector2( 71.5413, -93.6756 ), Vector2( 72.8981, -96.3616 ) ]
+"values": [ Vector2( -1.45264, -20.7617 ), Vector2( -1.45264, -20.7617 ), Vector2( -1.45264, -20.7617 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Mask_remote/Feather_right:rotation_degrees")
+tracks/5/path = NodePath("Mask_remote/Feather_middle:rotation_degrees")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -75,10 +75,10 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 0.4, 1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 10.6664, 0.0 ]
+"values": [ 0.0, -1.93033, 0.0 ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Mask_remote/Feather_middle:position")
+tracks/6/path = NodePath("Mask_remote/Hand_left:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -87,10 +87,10 @@ tracks/6/keys = {
 "times": PoolRealArray( 0, 0.4, 1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1.39692, -97.6702 ), Vector2( -0.758057, -105.091 ), Vector2( 1.39692, -97.6702 ) ]
+"values": [ Vector2( -17.9025, 3.53523 ), Vector2( -17.9025, 7.3363 ), Vector2( -17.9025, 3.53523 ) ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Mask_remote/Feather_middle:rotation_degrees")
+tracks/7/path = NodePath("Mask_remote/Hand_left:rotation_degrees")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -99,10 +99,10 @@ tracks/7/keys = {
 "times": PoolRealArray( 0, 0.4, 1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, -2.04311, 0.0 ]
+"values": [ 0.0, 0.0, 0.0 ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("Mask_remote/Foot_left:position")
+tracks/8/path = NodePath("Mask_remote:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -111,10 +111,10 @@ tracks/8/keys = {
 "times": PoolRealArray( 0, 0.4, 1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -90.049, 132.776 ), Vector2( -89.1453, 149.947 ), Vector2( -90.049, 132.776 ) ]
+"values": [ Vector2( 0, 0 ), Vector2( 0, -7.03433 ), Vector2( 0, 0 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("Mask_remote/Foot_left:rotation_degrees")
+tracks/9/path = NodePath("Mask_remote:rotation_degrees")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -135,7 +135,7 @@ tracks/10/keys = {
 "times": PoolRealArray( 0, 0.4, 1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 136.796, 49.9908 ), Vector2( 136.796, 63.5469 ), Vector2( 136.796, 49.9908 ) ]
+"values": [ Vector2( 18.5086, 2.06796 ), Vector2( 18.5086, 5.86903 ), Vector2( 18.5086, 2.06796 ) ]
 }
 tracks/11/type = "value"
 tracks/11/path = NodePath("Mask_remote/Hand_right:rotation_degrees")
@@ -159,7 +159,7 @@ tracks/12/keys = {
 "times": PoolRealArray( 0, 0.4, 1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 87.2137, 135.231 ), Vector2( 88.1174, 152.402 ), Vector2( 87.2137, 135.231 ) ]
+"values": [ Vector2( 15.0902, 18.6568 ), Vector2( 15.0902, 25.2356 ), Vector2( 15.0902, 18.6568 ) ]
 }
 tracks/13/type = "value"
 tracks/13/path = NodePath("Mask_remote/Foot_right:rotation_degrees")
@@ -174,7 +174,7 @@ tracks/13/keys = {
 "values": [ -180.0, -180.0, -180.0 ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("Mask_remote:position")
+tracks/14/path = NodePath("Mask_remote/Foot_left:position")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
@@ -183,10 +183,10 @@ tracks/14/keys = {
 "times": PoolRealArray( 0, 0.4, 1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 0, -17.7031 ), Vector2( 0, 0 ) ]
+"values": [ Vector2( -13.4061, 18.3071 ), Vector2( -13.4061, 24.8859 ), Vector2( -13.4061, 18.3071 ) ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("Mask_remote:rotation_degrees")
+tracks/15/path = NodePath("Mask_remote/Foot_left:rotation_degrees")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -198,90 +198,93 @@ tracks/15/keys = {
 "values": [ 0.0, 0.0, 0.0 ]
 }
 
-[sub_resource type="CapsuleShape2D" id=2]
-radius = 181.597
-height = 56.3487
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 29.7882
+height = -8.48421
 
-[sub_resource type="CircleShape2D" id=3]
-radius = 1253.8
+[sub_resource type="CircleShape2D" id=2]
+radius = 273.328
 
 [node name="Ennemy" type="KinematicBody2D"]
 position = Vector2( 0, -3 )
-scale = Vector2( 0.1, 0.1 )
+scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 1 )
-target = Vector2( 50, 50 )
+target = Vector2( 200, 200 )
 
 [node name="Mask_remote" type="RemoteTransform2D" parent="."]
-editor/display_folded = true
 remote_path = NodePath("../Mask")
 
 [node name="Feather_left" type="Sprite" parent="Mask_remote"]
-position = Vector2( -65.6381, -85.591 )
+position = Vector2( -16.421, -17.1693 )
 texture = ExtResource( 2 )
-offset = Vector2( -61.2262, -80.1148 )
+offset = Vector2( -10.4545, -17.4135 )
 region_enabled = true
-region_rect = Rect2( 23, 15, 190, 229 )
+region_rect = Rect2( 4.375, 1.25, 38.875, 47.125 )
 
 [node name="Feather_right" type="Sprite" parent="Mask_remote"]
-position = Vector2( 72.8981, -96.3616 )
+position = Vector2( 12.3183, -16.5706 )
 texture = ExtResource( 2 )
-offset = Vector2( 58.5867, -73.9314 )
+offset = Vector2( 13.1905, -17.2108 )
 region_enabled = true
-region_rect = Rect2( 35, 261, 180, 212 )
+region_rect = Rect2( 4, 51.5, 40.25, 43.375 )
 
 [node name="Feather_middle" type="Sprite" parent="Mask_remote"]
-position = Vector2( 1.39692, -97.6702 )
+position = Vector2( -1.45264, -20.7617 )
 texture = ExtResource( 2 )
-offset = Vector2( 5.65882, -131.566 )
+offset = Vector2( 1.92229, -28.8539 )
 region_enabled = true
-region_rect = Rect2( 258, 24, 192, 347 )
+region_rect = Rect2( 50.75, 3.5, 40, 69.5 )
 
 [node name="Hand_left" type="Sprite" parent="Mask_remote"]
-position = Vector2( -129.614, 45.2408 )
+position = Vector2( -17.9025, 3.53523 )
 texture = ExtResource( 2 )
+offset = Vector2( -9.92651, 5.78146 )
 region_enabled = true
-region_rect = Rect2( 52, 496, 131, 97 )
+region_rect = Rect2( 9.25, 97.75, 28.25, 21 )
 
 [node name="Hand_right" type="Sprite" parent="Mask_remote"]
-position = Vector2( 136.796, 49.9908 )
+position = Vector2( 18.5086, 2.06796 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
 texture = ExtResource( 2 )
+offset = Vector2( -9.17607, 6.4298 )
 region_enabled = true
-region_rect = Rect2( 52, 496, 129, 99 )
+region_rect = Rect2( 9.25, 98.75, 27.75, 19.5 )
 
 [node name="Foot_left" type="Sprite" parent="Mask_remote"]
-position = Vector2( -90.049, 132.776 )
+position = Vector2( -13.4061, 18.3071 )
 texture = ExtResource( 2 )
+offset = Vector2( -6.8103, 8.79765 )
 region_enabled = true
-region_rect = Rect2( 100, 584, 107, 111 )
+region_rect = Rect2( 19, 117, 23.5, 21.75 )
 
 [node name="Foot_right" type="Sprite" parent="Mask_remote"]
-position = Vector2( 87.2137, 135.231 )
+position = Vector2( 15.0902, 18.6568 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
 texture = ExtResource( 2 )
+offset = Vector2( -6.38962, 7.30919 )
 region_enabled = true
-region_rect = Rect2( 97, 583, 113, 113 )
+region_rect = Rect2( 19.25, 116.25, 22.5, 21.75 )
 
 [node name="Mask" type="Sprite" parent="."]
-scale = Vector2( 1, 1 )
 texture = ExtResource( 2 )
 region_enabled = true
-region_rect = Rect2( 264, 464, 222, 233 )
+region_rect = Rect2( 52, 92.75, 46, 46.25 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Idle = SubResource( 1 )
+anims/Idle = SubResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
 position = Vector2( 2.58521, 1.21486 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
