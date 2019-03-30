@@ -3,10 +3,12 @@ extends Node2D
 var WalkingPlayerScene = preload("res://Scenes/WalkingPlayer/WalkingPlayer.tscn")
 var Tower = preload("res://Scenes/Tower/Tower.tscn")
 var EnnemyScene = preload("res://Scenes/Ennemy/Ennemy.tscn")
+var RockScene = preload("res://Scenes/Objects/Rock.tscn")
 
 var tower;
 var player;
 var screen_size  # Size of the game window.
+var diag = 0
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -15,6 +17,7 @@ var screen_size  # Size of the game window.
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	screen_size = get_viewport_rect().size
+	diag = sqrt(pow(screen_size.x, 2) + pow(screen_size.y, 2))
 	start()
 
 func start():
@@ -73,4 +76,19 @@ func _on_Timer_timeout():
 		position.y = randi() % int(screen_size.y +100) - 50
 	ennemy.position = position
 	ennemy.setTarget(tower.position)
+	ennemy.connect('killed', self, 'spawn_Rock_at_pos')
 	add_child(ennemy)
+
+func spawn_Rock_at_pos(position):
+	var rock = RockScene.instance()
+	rock.position = position
+	add_child(rock)
+
+func _on_RockTimer_timeout():
+	var rotation = deg2rad(randi() % 361)
+	var length = randi() % int(diag/2)
+	var position = Vector2()
+	position.rotated(rotation)
+	position =  position * length
+	
+	pass # Replace with function body.

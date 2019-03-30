@@ -8,9 +8,9 @@
 script = ExtResource( 1 )
 
 [node name="LevelBase" parent="." instance=ExtResource( 2 )]
-position = Vector2( -51.3825, 457.955 )
+rotation = 0.0
 
-[node name="Timer" type="Timer" parent="."]
+[node name="EnnemyTimer" type="Timer" parent="."]
 wait_time = 3.0
 autostart = true
 
@@ -19,4 +19,8 @@ autostart = true
 [node name="Rock" parent="." instance=ExtResource( 3 )]
 position = Vector2( 533.717, 387.7 )
 
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[node name="RockTimer" type="Timer" parent="."]
+wait_time = 10.0
+
+[connection signal="timeout" from="EnnemyTimer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="RockTimer" to="." method="_on_RockTimer_timeout"]

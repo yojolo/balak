@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 signal hit_tower
+signal killed
 
 var type = 'Ennemy'
 export var speed= 100
@@ -51,4 +52,5 @@ func _on_Area2D_body_exited(body):
 			player = null
 
 func kill():
+	emit_signal("killed", get_position())
 	queue_free()
