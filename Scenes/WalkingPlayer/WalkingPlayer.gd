@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 signal hit
+signal rock_pick_up
 signal tower_reload
 
 # Declare member variables here. Examples:
@@ -29,6 +30,11 @@ func get_input():
 		velocity = velocity.normalized() * speed
 	return velocity
 
+func pickUpRock(rock):
+	if currentCharge < maxRocks:
+		rock.queue_free()
+		currentCharge += 1
+		emit_signal('rock_pick_up')
 
 func _physics_process(delta):
 	var velocity = get_input()
@@ -40,11 +46,6 @@ func _physics_process(delta):
 				currentCharge = 0
 			if (collision.collider.type == 'Ennemy'):
 				emit_signal('hit')
-			if (collision.collider.type == 'Rock'):
-				if currentCharge < maxRocks:
-					collision.collider.queue_free()
-					currentCharge += 1
-					emit_signal('rock_pick_up')
 		else:
     		velocity = velocity.slide(collision.normal)
 

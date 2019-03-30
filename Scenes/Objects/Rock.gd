@@ -1,6 +1,4 @@
-extends StaticBody2D
-
-signal rock_pick_up
+extends Area2D
 
 var type = 'Rock'
 
@@ -12,6 +10,10 @@ var type = 'Rock'
 func _ready():
 	pass # Replace with function body.
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+
+
+
+func _on_Rock_body_entered(body):
+	if ('type' in body):
+		if (body.has_method('pickUpRock')):
+			body.pickUpRock(self)

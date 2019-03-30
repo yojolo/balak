@@ -48,6 +48,8 @@ func start():
 func _on_hud_stop_game():
 	player.queue_free()
 	tower.queue_free()
+	$EnnemyTimer.stop()
+	$RockTimer.stop()
 	for ennemy in ennemies:
 		ennemy.moving = false
 

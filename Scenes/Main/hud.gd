@@ -41,7 +41,8 @@ func _on_Start_pressed():
 	
 func stop():
 	$GameOver.show()
-	$GameOver/Score.set_text(score)
+	$GameOver/Score.set_text(str(score))
+	$Start.show()
 	
 func remove_life():
 	life -= 1
@@ -61,5 +62,5 @@ func no_ammo():
 
 func ennemy_killed(ennemy):
 	score += ennemy.value
-	$ScoreLabel/Score.set_text(score)
+	$ScoreLabel/Score.set_text(str(score))
 	

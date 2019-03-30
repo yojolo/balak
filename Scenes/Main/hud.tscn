@@ -169,5 +169,6 @@ anims/outOfAmmo = SubResource( 1 )
 wait_time = 3.0
 one_shot = true
 
+[connection signal="stop_game" from="." to="." method="stop"]
 [connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
 [connection signal="timeout" from="NoAmmo/Timer" to="NoAmmo" method="_on_Timer_timeout"]
