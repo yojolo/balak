@@ -1,7 +1,6 @@
 extends KinematicBody2D
 
 signal hit
-signal rock_pick_up
 signal tower_reload
 
 # Declare member variables here. Examples:
@@ -45,7 +44,6 @@ func _physics_process(delta):
 		if ('type' in collision.collider):
 			if (collision.collider.type == 'Tower'):
 				emit_signal('tower_reload', currentCharge)
-				print('r')
 				currentCharge = 0
 			if (collision.collider.type == 'Ennemy'):
 				emit_signal('hit')

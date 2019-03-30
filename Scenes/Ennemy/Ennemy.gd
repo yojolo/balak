@@ -7,6 +7,8 @@ var type = 'Ennemy'
 export var speed= 100
 export (Vector2) var target
 var player
+var value = 10
+var moving = true
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -20,6 +22,9 @@ func setTarget(targetToSet):
 	target = targetToSet
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if moving == false:
+		$AnimationPlayer.play('Win')
+		return
 	$AnimationPlayer.play('Idle')
 
 	var rotation
@@ -52,5 +57,5 @@ func _on_Area2D_body_exited(body):
 			player = null
 
 func kill():
-	emit_signal("killed", get_position())
+	emit_signal("killed", self)
 	queue_free()
