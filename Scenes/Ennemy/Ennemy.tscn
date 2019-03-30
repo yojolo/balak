@@ -230,13 +230,13 @@ region_enabled = true
 region_rect = Rect2( 258, 24, 192, 347 )
 
 [node name="Hand_left" type="Sprite" parent="Mask_remote"]
-position = Vector2( -703.414, 254.241 )
+position = Vector2( -129.614, 45.2408 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 52, 496, 131, 97 )
 
 [node name="Hand_right" type="Sprite" parent="Mask_remote"]
-position = Vector2( 710.595, 254.241 )
+position = Vector2( 136.796, 49.9908 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
 texture = ExtResource( 1 )
@@ -244,13 +244,13 @@ region_enabled = true
 region_rect = Rect2( 52, 496, 129, 99 )
 
 [node name="Foot_left" type="Sprite" parent="Mask_remote"]
-position = Vector2( -479.242, 659.475 )
+position = Vector2( -90.049, 132.776 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 100, 584, 107, 111 )
 
 [node name="Foot_right" type="Sprite" parent="Mask_remote"]
-position = Vector2( 426.069, 659.475 )
+position = Vector2( 87.2137, 135.231 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
 texture = ExtResource( 1 )
