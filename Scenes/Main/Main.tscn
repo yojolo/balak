@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scenes/Main/Main.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Main/Levels/LevelBase.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/Main/hud.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Objects/Rock.tscn" type="PackedScene" id=3]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
@@ -12,15 +12,15 @@ rotation = 0.0
 
 [node name="EnnemyTimer" type="Timer" parent="."]
 wait_time = 3.0
+autostart = true
 
 [node name="Position2D" type="Position2D" parent="."]
+
+[node name="Rock" parent="." instance=ExtResource( 3 )]
+position = Vector2( 533.717, 387.7 )
 
 [node name="RockTimer" type="Timer" parent="."]
 wait_time = 10.0
 
-[node name="hud" parent="." instance=ExtResource( 3 )]
-
 [connection signal="timeout" from="EnnemyTimer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="RockTimer" to="." method="_on_RockTimer_timeout"]
-[connection signal="start_game" from="hud" to="." method="start"]
-[connection signal="stop_game" from="hud" to="." method="_on_hud_stop_game"]

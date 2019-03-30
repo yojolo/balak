@@ -25,7 +25,7 @@ func _process(delta):
 	if moving == false:
 		$AnimationPlayer.play('Win')
 		return
-	$AnimationPlayer.play('Idle')
+	$AnimationPlayer.play('Walk')
 
 	var rotation
 	if (player != null):
@@ -57,5 +57,6 @@ func _on_Area2D_body_exited(body):
 			player = null
 
 func kill():
+	$DeathAudioStream.play()
 	emit_signal("killed", self)
 	queue_free()
