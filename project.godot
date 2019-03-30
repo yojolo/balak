@@ -16,7 +16,6 @@ _global_script_class_icons={
 [application]
 
 config/name="Balak"
-run/main_scene="res://Scenes/Main/Main.tscn"
 config/icon="res://icon.png"
 
 [rendering]

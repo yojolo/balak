@@ -1,9 +1,268 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://ennemy.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Ennemy/sprite.png" type="Texture" id=1]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Idle"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Mask_remote/Foot_right:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 426.069, 659.475 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Mask_remote/Foot_right:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -180.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Mask_remote/Hand_right:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 710.595, 254.241 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Mask_remote/Hand_right:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -180.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Mask_remote/Feather_middle:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 46.7007, -1194.26 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Mask_remote/Feather_middle:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Mask_remote/Hand_left:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -703.414, 254.241 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Mask_remote/Hand_left:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Mask_remote/Feather_right:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 634.578, -844.007 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Mask_remote/Feather_right:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Mask_remote/Foot_left:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -479.242, 659.475 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Mask_remote/Foot_left:rotation_degrees")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Mask_remote/Feather_left:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -587.096, -867.351 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Mask_remote/Feather_left:rotation_degrees")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Mask_remote:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Mask_remote:rotation_degrees")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 181.597
+height = 56.3487
 
 [node name="Ennemy" type="KinematicBody2D"]
+position = Vector2( 0, -3 )
+scale = Vector2( 0.25, 0.25 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Mask_remote" type="RemoteTransform2D" parent="."]
+remote_path = NodePath("../Mask")
+
+[node name="Feather_left" type="Sprite" parent="Mask_remote"]
+position = Vector2( -122.868, -166.18 )
 texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 23, 15, 190, 229 )
+
+[node name="Feather_right" type="Sprite" parent="Mask_remote"]
+position = Vector2( 130.128, -167.607 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 35, 261, 180, 212 )
+
+[node name="Feather_middle" type="Sprite" parent="Mask_remote"]
+position = Vector2( 4.90076, -236.657 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 258, 24, 192, 347 )
+
+[node name="Hand_left" type="Sprite" parent="Mask_remote"]
+position = Vector2( -129.614, 45.2408 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 52, 496, 131, 97 )
+
+[node name="Hand_right" type="Sprite" parent="Mask_remote"]
+position = Vector2( 136.796, 49.9908 )
+rotation = -3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 52, 496, 129, 99 )
+
+[node name="Foot_left" type="Sprite" parent="Mask_remote"]
+position = Vector2( -90.049, 132.776 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 100, 584, 107, 111 )
+
+[node name="Foot_right" type="Sprite" parent="Mask_remote"]
+position = Vector2( 87.2137, 135.231 )
+rotation = -3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 97, 583, 113, 113 )
+
+[node name="Mask" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 264, 464, 222, 233 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Idle = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 2.58521, 1.21486 )
+shape = SubResource( 2 )
 
