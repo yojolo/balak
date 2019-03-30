@@ -59,3 +59,7 @@ func _on_Area2D_body_exited(body):
 func kill():
 	emit_signal("killed", self)
 	queue_free()
+
+func stop_moving():
+	moving = false
+	

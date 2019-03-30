@@ -205,7 +205,9 @@ height = -1.50595
 [sub_resource type="CircleShape2D" id=3]
 radius = 273.328
 
-[node name="Ennemy" type="KinematicBody2D"]
+[node name="Ennemy" type="KinematicBody2D" groups=[
+"ennemies",
+]]
 position = Vector2( 0, -3 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 1 )

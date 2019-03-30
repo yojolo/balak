@@ -9,7 +9,6 @@ var tower;
 var player;
 var screen_size  # Size of the game window.
 var diag = 0
-var ennemies = []
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -21,9 +20,7 @@ func _ready():
 	diag = sqrt(pow(screen_size.x, 2) + pow(screen_size.y, 2))
 
 func start():
-	for ennemy in ennemies:
-		ennemy.queue_free()
-	ennemies = []
+	get_tree().call_group('ennemies', 'queue_free')
 	player = WalkingPlayerScene.instance()
 	player.connect("hit", self, "on_Player_Hit")
 	tower = Tower.instance()
@@ -50,8 +47,7 @@ func _on_hud_stop_game():
 	tower.queue_free()
 	$EnnemyTimer.stop()
 	$RockTimer.stop()
-	for ennemy in ennemies:
-		ennemy.moving = false
+	get_tree().call_group('ennemies', 'stop_moving')
 
 func on_Player_Hit():
 	pass
@@ -94,7 +90,6 @@ func _on_Timer_timeout():
 
 func ennemy_killed(ennemy):
 	spawn_Rock_at_pos(ennemy.position)
-	ennemies.erase(ennemy)
 
 func spawn_Rock_at_pos(position):
 	var rock = RockScene.instance()
