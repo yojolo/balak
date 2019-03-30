@@ -46,3 +46,6 @@ func _on_Area2D_body_exited(body):
 	if ('type' in body):
 		if (body.type == 'WalkingPlayer'):
 			player = null
+
+func kill():
+	queue_free()

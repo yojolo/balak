@@ -1,5 +1,9 @@
 extends StaticBody2D
 
+signal shoot
+
+var BulletScene = preload("res://Scenes/Objects/Bullet.tscn")
+
 export var life = 5
 var type = 'Tower'
 export var number_ennemy_close = 0
@@ -22,6 +26,7 @@ func _input(event):
 	if event is InputEventMouseButton:
 		var rotation = get_global_transform().get_rotation()
 		var position = get_position()
+		emit_signal('shoot', BulletScene, rotation, position)
 	
 
 
