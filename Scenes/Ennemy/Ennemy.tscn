@@ -5,172 +5,172 @@
 [sub_resource type="Animation" id=1]
 resource_name = "Idle"
 tracks/0/type = "value"
-tracks/0/path = NodePath("Mask_remote/Foot_right:position")
+tracks/0/path = NodePath("Mask_remote/Hand_left:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 426.069, 659.475 ) ]
+"values": [ Vector2( -129.614, 45.2408 ), Vector2( -129.614, 58.7969 ), Vector2( -129.614, 45.2408 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Mask_remote/Foot_right:rotation_degrees")
+tracks/1/path = NodePath("Mask_remote/Hand_left:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ -180.0 ]
+"values": [ 0.0, 0.0, 0.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Mask_remote/Hand_right:position")
+tracks/2/path = NodePath("Mask_remote/Feather_left:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 710.595, 254.241 ) ]
+"values": [ Vector2( -65.6381, -85.591 ), Vector2( -61.6418, -86.0652 ), Vector2( -65.6381, -85.591 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Mask_remote/Hand_right:rotation_degrees")
+tracks/3/path = NodePath("Mask_remote/Feather_left:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ -180.0 ]
+"values": [ 0.0, -8.59721, 0.0 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Mask_remote/Feather_middle:position")
+tracks/4/path = NodePath("Mask_remote/Feather_right:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 46.7007, -1194.26 ) ]
+"values": [ Vector2( 72.8981, -96.3616 ), Vector2( 71.5413, -93.6756 ), Vector2( 72.8981, -96.3616 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Mask_remote/Feather_middle:rotation_degrees")
+tracks/5/path = NodePath("Mask_remote/Feather_right:rotation_degrees")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0 ]
+"values": [ 0.0, 10.6664, 0.0 ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Mask_remote/Hand_left:position")
+tracks/6/path = NodePath("Mask_remote/Feather_middle:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -703.414, 254.241 ) ]
+"values": [ Vector2( 1.39692, -97.6702 ), Vector2( -0.758057, -105.091 ), Vector2( 1.39692, -97.6702 ) ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Mask_remote/Hand_left:rotation_degrees")
+tracks/7/path = NodePath("Mask_remote/Feather_middle:rotation_degrees")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0 ]
+"values": [ 0.0, -2.04311, 0.0 ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("Mask_remote/Feather_right:position")
+tracks/8/path = NodePath("Mask_remote/Foot_left:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 634.578, -844.007 ) ]
+"values": [ Vector2( -90.049, 132.776 ), Vector2( -89.1453, 149.947 ), Vector2( -90.049, 132.776 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("Mask_remote/Feather_right:rotation_degrees")
+tracks/9/path = NodePath("Mask_remote/Foot_left:rotation_degrees")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0 ]
+"values": [ 0.0, 0.0, 0.0 ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("Mask_remote/Foot_left:position")
+tracks/10/path = NodePath("Mask_remote/Hand_right:position")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -479.242, 659.475 ) ]
+"values": [ Vector2( 136.796, 49.9908 ), Vector2( 136.796, 63.5469 ), Vector2( 136.796, 49.9908 ) ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("Mask_remote/Foot_left:rotation_degrees")
+tracks/11/path = NodePath("Mask_remote/Hand_right:rotation_degrees")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
 tracks/11/enabled = true
 tracks/11/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0 ]
+"values": [ -180.0, -180.0, -180.0 ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("Mask_remote/Feather_left:position")
+tracks/12/path = NodePath("Mask_remote/Foot_right:position")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
 tracks/12/enabled = true
 tracks/12/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -587.096, -867.351 ) ]
+"values": [ Vector2( 87.2137, 135.231 ), Vector2( 88.1174, 152.402 ), Vector2( 87.2137, 135.231 ) ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("Mask_remote/Feather_left:rotation_degrees")
+tracks/13/path = NodePath("Mask_remote/Foot_right:rotation_degrees")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
 tracks/13/enabled = true
 tracks/13/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0 ]
+"values": [ -180.0, -180.0, -180.0 ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("Mask_remote:position")
@@ -179,10 +179,10 @@ tracks/14/loop_wrap = true
 tracks/14/imported = false
 tracks/14/enabled = true
 tracks/14/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ) ]
+"values": [ Vector2( 0, 0 ), Vector2( 0, -17.7031 ), Vector2( 0, 0 ) ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("Mask_remote:rotation_degrees")
@@ -191,10 +191,10 @@ tracks/15/loop_wrap = true
 tracks/15/imported = false
 tracks/15/enabled = true
 tracks/15/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0 ]
+"values": [ 0.0, 0.0, 0.0 ]
 }
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -209,21 +209,21 @@ scale = Vector2( 0.25, 0.25 )
 remote_path = NodePath("../Mask")
 
 [node name="Feather_left" type="Sprite" parent="Mask_remote"]
-position = Vector2( -587.096, -867.351 )
+position = Vector2( -65.6381, -85.591 )
 texture = ExtResource( 1 )
 offset = Vector2( -61.2262, -80.1148 )
 region_enabled = true
 region_rect = Rect2( 23, 15, 190, 229 )
 
 [node name="Feather_right" type="Sprite" parent="Mask_remote"]
-position = Vector2( 634.578, -844.007 )
+position = Vector2( 72.8981, -96.3616 )
 texture = ExtResource( 1 )
 offset = Vector2( 58.5867, -73.9314 )
 region_enabled = true
 region_rect = Rect2( 35, 261, 180, 212 )
 
 [node name="Feather_middle" type="Sprite" parent="Mask_remote"]
-position = Vector2( 46.7007, -1194.26 )
+position = Vector2( 1.39692, -97.6702 )
 texture = ExtResource( 1 )
 offset = Vector2( 5.65882, -131.566 )
 region_enabled = true
